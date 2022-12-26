@@ -4,9 +4,9 @@ import * as ChoiceControllers from "#components/choice/choice-controller.js";
 const choices = new Router();
 
 choices.get("/", ChoiceControllers.index);
-choices.get("/:id", ChoicesControllers.id);
-choices.post("/", ChoicesControllers.create);
-choices.put("/:id", ChoicesControllers.update);
-choices.del("/:id", ChoicesControllers.del);
+choices.get("/:id", ChoiceControllers.id);
+choices.post("/", ChoiceControllers.create);
+choices.put("/:id", ChoiceControllers.update);
+choices.del("/:id", ChoiceControllers.del);
 
 export default choices;
