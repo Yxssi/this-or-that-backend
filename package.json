@@ -1,10 +1,8 @@
 {
-  "name": "tabarin-pwa-ynov",
+  "name": "this-or-that-pwa",
   "version": "1.0.0",
-  "description": "Small PWA",
-  "main": "app.js",
-  "repository": "git@github.com:kravorkid/tabarin-pwa-ynov.git",
-  "author": "matthieu <matthieu.tabarin@gmail.com>",
+  "description": "node express backend for a this or that app",
+  "main": "index.js",
   "license": "MIT",
   "scripts": {
     "dev": "nodemon -r dotenv/config app.js"
@@ -14,6 +12,7 @@
     "@koa/cors": "^4.0.0",
     "@koa/router": "^12.0.0",
     "dotenv": "^16.0.3",
+    "express": "^4.18.2",
     "joi": "^17.7.0",
     "koa": "^2.13.4",
     "koa-bodyparser": "^4.3.0",
