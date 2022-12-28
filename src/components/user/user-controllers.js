@@ -1,4 +1,5 @@
 import User from "#components/user/user-model.js";
+import Choice from "#components/choice/choice-model.js";
 import Joi from "joi";
 
 export async function index(ctx) {
@@ -50,5 +51,25 @@ export async function del(ctx) {
     ctx.ok();
   } catch (error) {
     ctx.badRequest({ message: e.message });
+  }
+}
+
+// wip :
+export async function saveChoice(ctx) {
+  try {
+    const user = await User.findById(ctx.params.id);
+    const choice = ctx.params.choiceTitle;
+    const choiceId = ctx.body;
+    if (user) {
+      user.choices.push(choice);
+      await user.save();
+      ctx.ok(user);
+    } else {
+      ctx.badRequest({
+        message: choiceId,
+      });
+    }
+  } catch (error) {
+    ctx.badRequest({ message: error.message });
   }
 }

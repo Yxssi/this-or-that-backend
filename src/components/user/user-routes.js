@@ -9,4 +9,6 @@ users.post("/", UserControllers.create);
 users.put("/:id", UserControllers.update);
 users.del("/:id", UserControllers.del);
 
+users.post("/choice/:choiceTitle", UserControllers.saveChoice);
+
 export default users;
