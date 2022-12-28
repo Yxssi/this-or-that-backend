@@ -1,7 +1,7 @@
 import Router from "@koa/router";
 
-import userRoutes from "#components/user/user-routes.js";
-import choiceRoutes from "#components/choice/choice-routes.js";
+import userRoutes from "../components/user/user-routes.js";
+import choiceRoutes from "../components/choice/choice-routes.js";
 
 const API_V1_ROUTER = new Router({ prefix: "/api/v1" });
 

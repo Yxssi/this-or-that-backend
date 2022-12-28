@@ -1,9 +1,9 @@
-import "#config/database.js";
+import "./src/config/database";
 import Koa from "koa";
 import bodyParser from "koa-bodyparser";
 import respond from "koa-respond";
 import cors from "@koa/cors";
-import { API_V1_ROUTER } from "#routes/index.js";
+import { API_V1_ROUTER } from "./src/routes/index.js";
 import serve from "koa-static";
 
 const app = new Koa();

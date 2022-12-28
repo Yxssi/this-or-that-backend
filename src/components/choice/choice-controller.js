@@ -1,4 +1,4 @@
-import Choice from "#components/choice/choice-model.js";
+import Choice from "./choice-model.js";
 import Joi from "joi";
 
 const choiceValidationSchema = Joi.object({

@@ -1,5 +1,5 @@
 import Router from "@koa/router";
-import * as ChoiceControllers from "#components/choice/choice-controller.js";
+import * as ChoiceControllers from "./choice-controller.js";
 
 const choices = new Router();
 

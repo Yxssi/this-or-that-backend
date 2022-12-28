@@ -1,5 +1,5 @@
-import User from "#components/user/user-model.js";
-import Choice from "#components/choice/choice-model.js";
+import User from "./user-model.js";
+// import Choice from "../components/choice/choice-model.js";
 import Joi from "joi";
 
 export async function index(ctx) {
