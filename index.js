@@ -1,14 +1,21 @@
-import express from "express";
+import "#config/database.js";
+import Koa from "koa";
+import bodyParser from "koa-bodyparser";
+import respond from "koa-respond";
+import cors from "@koa/cors";
+import { API_V1_ROUTER } from "#routes/index.js";
+import serve from "koa-static";
 
-const app = express();
+const app = new Koa();
 
-app.get("/", (req, res) => {
-  res.send("Express on Vercel");
-});
+app
+  .use(cors("*"))
+  .use(serve("./public"))
+  .use(bodyParser())
+  .use(respond())
+  .use(API_V1_ROUTER.routes())
+  .use(API_V1_ROUTER.allowedMethods());
 
-app.listen(5000, () => {
-  console.log("Running on port 5000.");
-});
+const PORT = 5006;
 
-// Export the Express API
-module.exports = app;
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
